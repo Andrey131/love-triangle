@@ -11,12 +11,14 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
   while(i<preferences.length+1)
   {
 
-  	j=preferences[i-1];
+    j=preferences[i-1];
     k=preferences[j-1];
     n=preferences[k-1];
     if(n==i&&i!=j)
-    	{count++;}
-   i++;
+    	{
+		count++;
+	}
+    i++;
   }
   return count/3;
 };
